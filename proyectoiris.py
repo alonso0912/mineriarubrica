@@ -9,8 +9,6 @@ Original file is located at
 ## 1) Instalación de dependencias
 """
 
-!pip install -q scikit-learn pandas plotly joblib seaborn
-
 """## 2) Importar librerías"""
 
 import pandas as pd
