@@ -1,20 +1,24 @@
 # -*- coding: utf-8 -*-
-"""ProyectoIris.ipynb
+import streamlit as st
+import pandas as pd
+import numpy as np
+import os
 
-"""## 3) Cargar el dataset
+# --- SECCIÓN PARA ESCOLLER EL CSV EN STREAMLIT ---
+st.title("Minería de Rubrica - Iris Dataset")
 
-"""
-
-# Ruta por defecto (ajusta si trabajas en Colab)
-CSV_PATH = "Iris.csv"
-if not os.path.exists(CSV_PATH):
-    print("Archivo no encontrado en /mnt/data. Si estás en Colab, sube 'Iris.csv' o monta Google Drive y actualiza CSV_PATH.")
+# Subidor de archivos
+uploaded_file = st.file_uploader("Selecciona el archivo CSV de Iris", type=["csv"])
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.success(f"Dataset cargado — filas: {df.shape[0]}, columnas: {df.shape[1]}")
+    st.dataframe(df.head())
+    # El resto de tu pipeline va aquí...
 else:
-    df = pd.read_csv(CSV_PATH)
-    print(f"Dataset cargado desde: {CSV_PATH} — filas: {df.shape[0]}, columnas: {df.shape[1]}")
-    display(df.head())
+    st.warning("Por favor, selecciona un archivo CSV para continuar.")
 
-"""### 3.1 Inspección de columnas y estandarización de nombres"""
+# El resto de tu código original (EDA, preprocesamiento, modelo, etc.) debería ir aquí, 
+# validando siempre que df exista antes de operar.
 
 # Estandarizar nombres de columnas si es necesario
 def standardize_columns(df):
