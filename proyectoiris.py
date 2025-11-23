@@ -47,8 +47,8 @@ else:
 """## 4) Información básica y valores faltantes"""
 
 if 'df' in globals():
-    display(df.info())
-    display(df.describe())
+    st.text(df.info())
+    st.text(df.describe())
     print('\nValores faltantes por columna:')
     print(df.isnull().sum())
 else:
