@@ -22,7 +22,7 @@ from sklearn.metrics import (
 # ======================================================
 
 st.set_page_config(page_title="Iris Species Classification", layout="wide")
-st.title("🌸 Iris Species Classification — Dashboard Completo")
+st.title(" Iris Species Classification — Dashboard Completo")
 
 
 # ======================================================
