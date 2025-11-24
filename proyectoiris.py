@@ -218,3 +218,8 @@ if st.button("Predecir especie"):
     st.success(f"🌼 Especie predicha: **{pred}**")
 
 
+print("Alonso De la Cruz")
+print("Luis Douglas")
+print("Andres Mora")
+
+
