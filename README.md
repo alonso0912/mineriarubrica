@@ -1,3 +1,7 @@
+Integrantes del grupo:
+Alonso De la Cruz, Andres Mora y Luis Douglas
+
+
 1. Propósito del Proyecto
 
 El propósito de este proyecto es desarrollar un modelo de aprendizaje supervisado capaz de clasificar correctamente las especies de flores Iris a partir de sus características morfológicas: longitud y ancho del sépalo, y longitud y ancho del pétalo.
