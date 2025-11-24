@@ -217,9 +217,15 @@ if st.button("Predecir especie"):
     pred = le.inverse_transform(best.predict(new_s))[0]
     st.success(f"🌼 Especie predicha: **{pred}**")
 
+t.markdown("---")
+st.subheader("Autores del Proyecto")
 
-print("Alonso De la Cruz")
-print("Luis Douglas")
-print("Andres Mora")
+st.write("""
+- **Alonso De la Cruz**  
+- **Luis Douglas**  
+- **Andres Mora**
+""")
+
+
 
 
