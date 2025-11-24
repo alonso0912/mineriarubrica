@@ -107,9 +107,13 @@ fig_scatter.update_traces(diagonal_visible=False)
 st.plotly_chart(fig_scatter, use_container_width=True)
 
 st.subheader("Matriz de Correlación")
+
+numeric_df = df.select_dtypes(include=[np.number])
+
 fig, ax = plt.subplots(figsize=(6,4))
-sns.heatmap(df.corr(), annot=True, cmap="coolwarm", ax=ax)
+sns.heatmap(numeric_df.corr(), annot=True, cmap="coolwarm", ax=ax)
 st.pyplot(fig)
+
 
 
 # ======================================================
