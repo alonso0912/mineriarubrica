@@ -217,7 +217,7 @@ if st.button("Predecir especie"):
     pred = le.inverse_transform(best.predict(new_s))[0]
     st.success(f"🌼 Especie predicha: **{pred}**")
 
-t.markdown("---")
+
 st.subheader("Autores del Proyecto")
 
 st.write("""
